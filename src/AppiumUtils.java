@@ -3,7 +3,7 @@ import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration; // Untuk Appium Java client v8+
+import java.time.Duration; 
 
 public class AppiumUtils {
 
@@ -12,8 +12,7 @@ public class AppiumUtils {
 
     public AppiumUtils(AndroidDriver<AndroidElement> driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, 15); // Durasi tunggu bisa disesuaikan
-        // Jika Appium v8+: this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        this.wait = new WebDriverWait(driver, 15); // Durasi tunggu 
     }
 
     public AndroidElement waitForElementToBeVisible(By locator) {
@@ -59,7 +58,7 @@ public class AppiumUtils {
         try { Thread.sleep(500); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 
-    public WebDriverWait getWebDriverWait() { // Metode yang dibutuhkan
+    public WebDriverWait getWebDriverWait() { 
         return this.wait;
     }
 
