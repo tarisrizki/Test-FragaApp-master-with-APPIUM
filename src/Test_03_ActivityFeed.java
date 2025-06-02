@@ -69,10 +69,6 @@ public class Test_03_ActivityFeed extends base {
         List<AndroidElement> kudosButtonsAfterScroll = driver.findElementsById("com.example.fraga:id/buttonKudos");
         
         if (!kudosButtonsAfterScroll.isEmpty()) {
-            // Asumsi: postingan pertama yang terlihat setelah scroll adalah postingan baru
-            // Jika Anda ingin lebih spesifik (misalnya, postingan kedua yang terlihat), Anda bisa menggunakan index:
-            // AndroidElement nextKudosButton = kudosButtonsAfterScroll.get(kudosButtonsAfterScroll.size() > 1 ? 1 : 0);
-            // Untuk kesederhanaan, kita ambil yang pertama terlihat setelah scroll.
             AndroidElement nextKudosButton = kudosButtonsAfterScroll.get(0); 
 
             TouchAction touchActionNext = new TouchAction(driver);
