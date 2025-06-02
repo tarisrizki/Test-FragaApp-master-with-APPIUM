@@ -28,7 +28,6 @@ public class Test_05_GoalsAndChallenges extends base {
         System.out.println("Judul halaman 'Goals' (textViewProfileTitle) terlihat.");
         Thread.sleep(500); 
 
-        // Kita asumsikan sudah di tab Personal atau kontennya yang dimuat.
         // Verifikasi dengan cardViewGoal2
         utils.waitForElementToBeVisible(By.id("com.example.fraga:id/cardViewGoal2")); 
         System.out.println("Berada di tampilan yang berisi Personal Goals (cardViewGoal2 terdeteksi).");
@@ -48,9 +47,6 @@ public class Test_05_GoalsAndChallenges extends base {
         utils.waitForElementToBeVisible(By.xpath("//android.widget.TextView[@text='Goal Templates']"));
         System.out.println("Judul 'Goal Templates' ditemukan.");
 
-        // PERBAIKAN: Setelah judul "Goal Templates" terlihat,
-        // scroll lagi secara spesifik ke cardViewTemplate1 agar pasti masuk viewport.
-        // Ini penting jika cardViewTemplate1 berada tepat di bawah judul dan mungkin belum sepenuhnya render/interactable.
         System.out.println("Melakukan scroll tambahan untuk memastikan cardViewTemplate1 terlihat...");
         utils.scrollToElementByResourceId("com.example.fraga:id/cardViewTemplate1");
         Thread.sleep(500); // Beri jeda setelah scroll
