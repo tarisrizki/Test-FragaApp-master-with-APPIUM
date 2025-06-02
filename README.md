@@ -16,14 +16,14 @@ Otomatisasi mencakup alur-alur utama berikut:
 
 ## Teknologi & Tools
 * Appium
-* Java (JDK 17)
+* Java 
 * Selenium WebDriver
 * Maven (Manajemen dependensi & build)
 * Android Studio (Untuk SDK & AVD)
 * UI Automator 2
 
 ## Struktur Proyek Utama
-* **`src/main/java/[nama_package_anda]/`**:
+* **`src/main/java/default/`**:
     * `base.java`: Konfigurasi DesiredCapabilities & inisialisasi `AndroidDriver`.
     * `AppiumUtils.java`: Kelas utilitas (waits, click, sendKeys, scroll).
     * `AuthenticationHelper.java`: Logika terpusat untuk registrasi, login, logout.
