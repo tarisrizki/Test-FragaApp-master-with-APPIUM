@@ -1,7 +1,7 @@
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions; // Pastikan import ini ada
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.net.MalformedURLException;
 
 public class Test_06_ProfileAndSettings extends base {
@@ -52,19 +52,6 @@ public class Test_06_ProfileAndSettings extends base {
         System.out.println("Berada di Halaman Profile.");
         System.out.println("Nama Profil: " + utils.getText(By.id("com.example.fraga:id/textViewProfileName")));
         
-        // (Opsional) Anda bisa tetap menjalankan testEditProfile jika diinginkan sebelum logout
-        // testEditProfile(driver, utils); 
-        // Thread.sleep(1000); 
-
-        // (Opsional) Anda bisa tetap menjalankan interaksi tombol navigasi jika diinginkan
-        // utils.scrollToElementByResourceId("com.example.fraga:id/buttonChallenges");
-        // utils.click(By.id("com.example.fraga:id/buttonChallenges"));
-        // utils.navigateBack(); 
-        // utils.waitForElementToBeVisible(By.id("com.example.fraga:id/textViewProfileName"));
-        // utils.scrollToElementByResourceId("com.example.fraga:id/buttonSocial");
-        // utils.click(By.id("com.example.fraga:id/buttonSocial"));
-        // utils.navigateBack(); 
-        // utils.waitForElementToBeVisible(By.id("com.example.fraga:id/textViewProfileName"));
 
         // --- Test Case: Halaman Settings & Proses Logout ---
         System.out.println("\n--- Memulai Test Case: Halaman Settings & Logout ---");
@@ -79,7 +66,6 @@ public class Test_06_ProfileAndSettings extends base {
         Thread.sleep(500); // Jeda singkat untuk memastikan halaman Settings stabil
 
         // 3. Langsung scroll ke bawah untuk menemukan layout Logout dan klik
-        // Metode logoutFromSettings sudah mencakup ini dan konfirmasinya.
         boolean logoutSuccess = AuthenticationHelper.logoutFromSettings(utils);
 
         if (logoutSuccess) {
