@@ -32,7 +32,7 @@ Otomatisasi mencakup alur-alur utama berikut:
 * **`pom.xml`**: File konfigurasi Maven.
 
 ## Prasyarat & Setup
-1.  Java JDK (versi 17 atau kompatibel).
+1.  Java JDK 
 2.  Apache Maven.
 3.  Node.js & NPM.
 4.  Appium Server (instal via `npm install -g appium`).
