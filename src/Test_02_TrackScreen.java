@@ -9,7 +9,7 @@ public class Test_02_TrackScreen extends base {
     private static final String USER_EMAIL = "rizki.test@example.com";
     private static final String USER_PASSWORD = "password123";
 
-    // Metode ini adalah static
+
     public static void testPlanThenTrackAndStop(AndroidDriver<AndroidElement> driver, AppiumUtils utils) throws InterruptedException {
         System.out.println("\n--- Test Case: Plan Activity -> Start dari Plan -> Kembali ke Track -> Start Tracking -> Stop Tracking ---");
         
@@ -19,8 +19,6 @@ public class Test_02_TrackScreen extends base {
         // 1. Klik tombol "PLAN ACTIVITY"
         utils.click(By.id("com.example.fraga:id/buttonCreateActivity")); 
         System.out.println("Tombol 'PLAN ACTIVITY' di halaman Track diklik.");
-
-        // ... sisa implementasi metode testPlanThenTrackAndStop ...
         
         By newActivityTitleLocator = By.xpath("//android.widget.TextView[@text='New Activity']");
         utils.waitForElementToBeVisible(newActivityTitleLocator);
@@ -71,7 +69,6 @@ public class Test_02_TrackScreen extends base {
 
         System.out.println("=== MEMULAI TEST SUITE: TRACK SCREEN (PLAN ACTIVITY & START/STOP) ===");
         if (AuthenticationHelper.login(utils, USER_EMAIL, USER_PASSWORD)) {
-            // Panggil metode static dengan parameter yang diperlukan
             testPlanThenTrackAndStop(driver, utils); 
         } else {
             System.out.println("Login GAGAL, tes Track Screen dibatalkan.");
