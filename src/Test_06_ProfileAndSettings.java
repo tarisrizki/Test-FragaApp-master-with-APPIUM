@@ -74,6 +74,6 @@ public class Test_06_ProfileAndSettings extends base {
             System.out.println("Proses Logout dari Settings GAGAL.");
         }
         
-        System.out.println("\n=== TEST SUITE: PROFILE & SETTINGS (FOKUS LOGOUT) SELESAI ===");
+        System.out.println("\n=== TEST SUITE: PROFILE & SETTINGS SELESAI ===");
     }
 }
